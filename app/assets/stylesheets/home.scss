@@ -1,0 +1,12 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$full: 100%;
+
+.large-element {
+	position: relative;
+	background: green;
+	height: $full;
+	width: $full;
+	margin-bottom: 5px;
+}
