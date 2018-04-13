@@ -12,6 +12,8 @@
  *
  */
  
+ @import 'bootstrap';
+ @import 'parsley';
  @import 'home'; 
 
 html {
@@ -20,5 +22,6 @@ html {
 
 body {
 	@extend html;
-	background: grey;
+  background: url(wave-bg.jpg) no-repeat center center fixed; 
+  background-size: cover;
 }

@@ -2,14 +2,41 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $full: 100%;
+$most: 90%;
+$much: 75%;
+$half: 50%;
 
 .large-element {
 	position: relative;
-	height: $full;
-	width: $full;
-	margin-bottom: 5px;
+  height: $full;
+  width: 95%;
+  margin: 50px auto;
+  border-radius: 1px;
+  box-shadow: 0px 0px 15px 0px #00178a;
 }
 
 .landing-element {
 	background: white;
+
+	.intro-info-container {
+		height: 300px;
+		width: $most;
+		margin: auto;
+	}
+}
+
+.rs-logo {
+  display: block;
+  position: relative;
+  width: 20%;
+  margin: auto;
+}
+
+.nav-wrapper {
+	position: relative;
+	
+	.nav-buttons {
+    position: relative;
+    margin-left: 20px;
+	}
 }
