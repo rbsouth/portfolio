@@ -6,9 +6,9 @@ $most: 90%;
 $much: 75%;
 $half: 50%;
 
+
 .large-element {
 	position: relative;
-  height: $full;
   width: 95%;
   margin: 50px auto;
   border-radius: 1px;
@@ -39,4 +39,47 @@ $half: 50%;
     position: relative;
     margin-left: 20px;
 	}
+}
+
+.profile-pic {
+	position: relative;
+	margin: 20px 20px 20px 50px;
+  box-shadow: 0px 0px 10px black;
+	border-radius: $half;
+	height: 300px;
+}
+
+.profile {
+  padding-bottom: 30px;
+}
+
+.nycda-logo {
+	height: 100px;
+  position: relative;
+  bottom: 10px;
+}
+
+.lang-logo {
+  height: 75px;
+  margin: 10px;
+}
+
+.title {
+	position: relative;
+	z-index: 1;
+  font-size: 50px;
+}
+
+.resume-icon {
+  height: 120px;
+  margin: 20px 0px 0px 40px;
+}
+
+i {
+	font-size: 75px;
+	color: #008efe;
+}
+
+.border-right{
+  border-right: 1px solid #c1c1c1;
 }
