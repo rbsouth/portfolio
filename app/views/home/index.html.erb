@@ -1,14 +1,31 @@
 <!-- each large element should take full screen -->
 <div class="landing-element large-element">
 	<div class="intro-info-container">
+		<%= image_tag (asset_path 'rslogo.png'), class: 'rs-logo' %>
 		<div class="my-name"> <%= @myName %> </div>
 		<div class="title"></div>
 	</div>
-	<div class="continue-btn"></div>
-</div>
 
-<div class="my-info large-element">
-	<div class="skills-list">
-		
+	<div class="nav-wrapper">
+		<div class="nav-buttons">
+			<div class="nav nav-pills mb-3" id="content-tab" role="tablist" aria-orientation="vertical">
+			  <a class="nav-link active" id="content-profile-tab" data-toggle="pill" href="#content-profile" role="tab" aria-controls="content-profile" aria-selected="true">Profile</a>
+			  <a class="nav-link" id="content-projects-tab" data-toggle="pill" href="#content-projects" role="tab" aria-controls="content-projects" aria-selected="false">Projects</a>
+			  <a class="nav-link" id="content-contact-tab" data-toggle="pill" href="#content-contact" role="tab" aria-controls="content-contact" aria-selected="false">Contact Me</a>
+			</div>
+		</div>
+
+		<div class="tab-content" id="content-tabContent">
+		  <div class="tab-pane fade show active" id="content-profile" role="tabpanel" aria-labelledby="content-profile-tab">
+
+		  </div>
+		  <div class="tab-pane fade" id="content-projects" role="tabpanel" aria-labelledby="content-projects-tab">
+		  	
+		  </div>
+		  <div class="tab-pane fade" id="content-contact" role="tabpanel" aria-labelledby="content-contact-tab">
+		  	
+		  </div>
+		</div>
 	</div>
+
 </div>
