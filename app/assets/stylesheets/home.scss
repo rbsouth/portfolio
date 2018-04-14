@@ -19,17 +19,21 @@ $half: 50%;
 	background: white;
 
 	.intro-info-container {
-		height: 300px;
+		height: 500px;
 		width: $most;
 		margin: auto;
 	}
 }
 
 .rs-logo {
-  display: block;
   position: relative;
   width: 20%;
   margin: auto;
+}
+
+.reid-south {
+  height: 100%;
+  width: 75%;
 }
 
 .nav-wrapper {
