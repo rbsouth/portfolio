@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0'
 gem 'parsley-rails'
 gem 'json'
+gem 'pony', '~> 1.12'
 gem 'pg', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0.rc2'

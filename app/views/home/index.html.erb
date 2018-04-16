@@ -18,15 +18,15 @@
 		<div class="tab-content" id="content-tabContent">
 		  <div class="tab-pane fade show active" id="content-profile" role="tabpanel" aria-labelledby="content-profile-tab">
 				<div class="profile row">
-					<div class="border-right col-md-4 col-12">
+					<div class="border-right col-lg-4 col-12">
 						<%= image_tag (asset_path 'profile-pic.png'), class: 'profile-pic' %>
 					</div>
-					<div class="border-right col-md-3 col-12">
+					<div class="border-right col-lg-3 col-12">
 						<div class="title">Info</div>
 						<%= image_tag (asset_path 'NYCDA-logo.jpg'), class: 'nycda-logo' %>
 						<%= link_to (image_tag (asset_path 'resume-icon.svg'), class: 'resume-icon'), @resumeLink, :target => "_blank" %>
 					</div>
-					<div class="col-md col-12">
+					<div class="col-lg col-12">
 						<div class="title">Skills</div>
 						<svg class="lang-logo" viewBox="0 0 128 128">
 							<path fill="#E44D26" d="M27.854 116.354l-8.043-90.211h88.378l-8.051 90.197-36.192 10.033z"></path><path fill="#F16529" d="M64 118.704l29.244-8.108 6.881-77.076h-36.125z"></path><path fill="#EBEBEB" d="M64 66.978h-14.641l-1.01-11.331h15.651v-11.064h-27.743l.264 2.969 2.72 30.489h24.759zM64 95.711l-.049.013-12.321-3.328-.788-8.823h-11.107l1.55 17.372 22.664 6.292.051-.015z"></path><path d="M28.034 1.627h5.622v5.556h5.144v-5.556h5.623v16.822h-5.623v-5.633h-5.143v5.633h-5.623v-16.822zM51.816 7.206h-4.95v-5.579h15.525v5.579h-4.952v11.243h-5.623v-11.243zM64.855 1.627h5.862l3.607 5.911 3.603-5.911h5.865v16.822h-5.601v-8.338l-3.867 5.981h-.098l-3.87-5.981v8.338h-5.502v-16.822zM86.591 1.627h5.624v11.262h7.907v5.561h-13.531v-16.823z"></path><path fill="#fff" d="M63.962 66.978v11.063h13.624l-1.284 14.349-12.34 3.331v11.51l22.682-6.286.166-1.87 2.6-29.127.27-2.97h-2.982zM63.962 44.583v11.064h26.725l.221-2.487.505-5.608.265-2.969z"></path>
@@ -69,13 +69,35 @@
 		  </div>
 		  <div class="tab-pane fade" id="content-projects" role="tabpanel" aria-labelledby="content-projects-tab">
 		  	<div class="projects">
-		  		<h2> Eatin </h2>
-		  		<p> <%= link_to "Github", some_path %> </p>
-		  		<p> <%= link_to "Demo", some_path %> </p>
+		  		<h2>
+		  			Eatin /
+		  			<%= link_to "Github", @eatinGithub %> /
+		  			<%= link_to "Demo", @eatinDemo %>
+		  		</h2>
+		  		<p> Mobile app that users can create and join groups and go on a local adventure. After the group decides a central location, the app will give the group a challenge with a random food to eat and a random city within a chosen radius (with directions). The group then has 24 hours to complete the challenge before it vanishes! </p>
+		  		<h2>
+		  			Shipped /
+		  			<%= link_to "Github", @shippedGithub %> /
+		  			<%= link_to "Demo", @shippedDemo %>
+		  		</h2>
+		  		<p> A single page app that lets you create jobs and easily assign created  boats to the job with a many to many relationship. </p>
+		  		<p> Simplified interface allows for fast and explicit navigation. </p>
+		  		<h2>
+		  			Eventure /
+		  			<%= link_to "Github", @eventureGithub %>
+		  		</h2>
+		  		<p> Used two user models (Organizer & User) and gave them different permissions and scoped views on a single application </p>
+		  		<ul>
+		  			<li> Organizer: Allowed to create, edit, or cancel events for all users to see. Able to track users going. </li>
+		  			<li> User: Able to look through all posted events and see the most popular. Can save events or mark if going and access them easily on their profile. </li>
+		  		</ul>
 		  	</div>
 		  </div>
 		  <div class="tab-pane fade" id="content-contact" role="tabpanel" aria-labelledby="content-contact-tab">
-		  	
+		  	<h2> Salt Lake City, Utah </h2>
+				<h2> (214) 620-3938 </h2>
+				<h2> rbsouth@gmail.com </h2>
+				<%= form_with model: %>
 		  </div>
 		</div>
 	</div>

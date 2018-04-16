@@ -53,9 +53,21 @@ $half: 50%;
 	height: 300px;
 }
 
-.profile {
-  padding-bottom: 30px;
+
+@media all and (min-width: 992px) {
+	
+	.profile {
+	  padding-bottom: 30px;
+	}
 }
+
+@media all and (max-width: 991px) {
+	.profile {
+	  padding-bottom: 30px;
+		margin: 15px;
+	}
+}
+
 
 .nycda-logo {
 	height: 100px;
@@ -77,6 +89,10 @@ $half: 50%;
 .resume-icon {
   height: 120px;
   margin: 20px 0px 0px 40px;
+}
+
+.projects {
+	margin: 25px;
 }
 
 i {
