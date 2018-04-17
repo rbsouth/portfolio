@@ -27,7 +27,7 @@ class HomeController < ApplicationController
                   :password             => ENV['GMAIL_PASSWORD'], 
                   :authentication       => :plain, 
 # :plain, :login, :cram_md5, no auth by default 
-                  :domain               => "reidsouth.com" # the HELO 
+                  :domain               => "gmail.com" # the HELO 
 # domain provided by the client to the server 
                 } 
 
