@@ -16,6 +16,8 @@ class HomeController < ApplicationController
 
   def email
   	Pony.mail(:to => 'rbsouth@gmail.com', :from => params[:from], :subject => params[:subject], :body => params[:body])
+
+  	render :new
   end
 
 end
