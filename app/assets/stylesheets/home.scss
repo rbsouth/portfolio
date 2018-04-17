@@ -59,12 +59,19 @@ $half: 50%;
 	.profile {
 	  padding-bottom: 30px;
 	}
+	.contact-info {
+		text-align: center;
+	}
 }
 
 @media all and (max-width: 991px) {
 	.profile {
 	  padding-bottom: 30px;
 		margin: 15px;
+	}
+	.contact-info {
+		text-align: center;
+		margin-bottom: 20px;
 	}
 }
 
@@ -102,4 +109,21 @@ i {
 
 .border-right{
   border-right: 1px solid #c1c1c1;
+}
+
+.content-row {
+	padding: 15px;
+}
+
+.contact-title {
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 2px solid #a5cff9;
+  margin-bottom: 35px;
+}
+
+.contact-form {
+	padding: 13px;
+  background: #a4d0f9;
+  border-radius: 5px;
 }

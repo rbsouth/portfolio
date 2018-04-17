@@ -2,6 +2,8 @@ class HomeController < ApplicationController
 
   def index
   	@myName = 'Reid South'
+  	@myGithub = 'https://github.com/rbsouth'
+  	@myLinkedin = 'https://www.linkedin.com/in/reid-south/'
   	@resumeLink = 'https://docs.google.com/document/d/1sMCqqe30Rc9oiXKotg7rWWAiBELFwagnAlnIPdw86sI/edit?usp=sharing'
   	@eatinGithub = 'https://github.com/rbsouth/eatin-ror.git'
   	@eatinDemo = 'https://reid-eatin.herokuapp.com/'
