@@ -59,12 +59,19 @@ $half: 50%;
 	.profile {
 	  padding-bottom: 30px;
 	}
+	.contact-info {
+		text-align: center;
+	}
 }
 
 @media all and (max-width: 991px) {
 	.profile {
 	  padding-bottom: 30px;
 		margin: 15px;
+	}
+	.contact-info {
+		text-align: center;
+		margin-bottom: 20px;
 	}
 }
 
@@ -73,6 +80,7 @@ $half: 50%;
 	height: 100px;
   position: relative;
   bottom: 10px;
+  margin: 5% 12% 0%;
 }
 
 .lang-logo {
@@ -88,18 +96,52 @@ $half: 50%;
 
 .resume-icon {
   height: 120px;
-  margin: 20px 0px 0px 40px;
+  margin: 10% 28%;
+  border-radius: 67px;
+  box-shadow: 0px 0px 10px #0e0e0e;
+  transition: 0.7s ease;
+
+	&:hover {
+		border: 5px solid light-blue;
+		transform: rotate(360deg);
+	}
+
+  &:active {
+  	box-shadow: inset 0px 0px 10px #0e0e0e;
+  }
 }
 
 .projects {
 	margin: 25px;
 }
 
-i {
-	font-size: 75px;
-	color: #008efe;
+.center-project {
+  background: #dedede;
+  margin: 0px -25px;
+  padding: 0px 25px;
+}
+
+.bottom-project {
+  padding-bottom: 10px;
 }
 
 .border-right{
   border-right: 1px solid #c1c1c1;
+}
+
+.content-row {
+	padding: 15px;
+}
+
+.contact-title {
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 2px solid #a5cff9;
+  margin-bottom: 35px;
+}
+
+.contact-form {
+	padding: 13px;
+  background: #a4d0f9;
+  border-radius: 5px;
 }

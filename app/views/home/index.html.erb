@@ -23,7 +23,7 @@
 					</div>
 					<div class="border-right col-lg-3 col-12">
 						<div class="title">Info</div>
-						<%= image_tag (asset_path 'NYCDA-logo.jpg'), class: 'nycda-logo' %>
+						<%= link_to (image_tag (asset_path 'NYCDA-logo.jpg'), class: 'nycda-logo'), @nycdaLink, :target => "_blank" %>
 						<%= link_to (image_tag (asset_path 'resume-icon.svg'), class: 'resume-icon'), @resumeLink, :target => "_blank" %>
 					</div>
 					<div class="col-lg col-12">
@@ -69,35 +69,65 @@
 		  </div>
 		  <div class="tab-pane fade" id="content-projects" role="tabpanel" aria-labelledby="content-projects-tab">
 		  	<div class="projects">
-		  		<h2>
-		  			Eatin /
-		  			<%= link_to "Github", @eatinGithub %> /
-		  			<%= link_to "Demo", @eatinDemo %>
-		  		</h2>
-		  		<p> Mobile app that users can create and join groups and go on a local adventure. After the group decides a central location, the app will give the group a challenge with a random food to eat and a random city within a chosen radius (with directions). The group then has 24 hours to complete the challenge before it vanishes! </p>
-		  		<h2>
-		  			Shipped /
-		  			<%= link_to "Github", @shippedGithub %> /
-		  			<%= link_to "Demo", @shippedDemo %>
-		  		</h2>
-		  		<p> A single page app that lets you create jobs and easily assign created  boats to the job with a many to many relationship. </p>
-		  		<p> Simplified interface allows for fast and explicit navigation. </p>
-		  		<h2>
-		  			Eventure /
-		  			<%= link_to "Github", @eventureGithub %>
-		  		</h2>
-		  		<p> Used two user models (Organizer & User) and gave them different permissions and scoped views on a single application </p>
-		  		<ul>
-		  			<li> Organizer: Allowed to create, edit, or cancel events for all users to see. Able to track users going. </li>
-		  			<li> User: Able to look through all posted events and see the most popular. Can save events or mark if going and access them easily on their profile. </li>
-		  		</ul>
+		  		<div class="top-project">
+			  		<h2>
+			  			Eatin /
+			  			<%= link_to "Github", @eatinGithub, :target => "_blank" %> /
+			  			<%= link_to "Demo", @eatinDemo, :target => "_blank" %> / 
+			  			** Mobile / Tablet
+			  		</h2>
+			  		<p> Mobile app that users can create and join groups and go on a local adventure. After the group decides a central location, the app will give the group a challenge with a random food to eat and a random city within a chosen radius (with directions). The group then has 24 hours to complete the challenge before it vanishes! </p>
+			  		</div>
+		  		<div class="center-project">
+		  			<h2>
+		  				Shipped /
+		  				<%= link_to "Github", @shippedGithub, :target => "_blank" %> /
+		  				<%= link_to "Demo", @shippedDemo, :target => "_blank" %> / 
+		  				** Desktop
+		  			</h2>
+		  			<p> A single page app that lets you create jobs and easily assign created  boats to the job with a many to many relationship. </p>
+		  			<p> Simplified interface allows for fast and explicit navigation. </p>
+		  			</div>
+			  			<div class="bottom-project">
+			  			<h2>
+			  			Eventure /
+			  			<%= link_to "Github", @eventureGithub, :target => "_blank" %> / 
+							** Mobile / Tablet/ Desktop
+			  		</h2>
+			  		<p> Used two user models (Organizer & User) and gave them different permissions and scoped views on a single application </p>
+			  		<ul>
+			  			<li> Organizer: Allowed to create, edit, or cancel events for all users to see. Able to track users going. </li>
+			  			<li> User: Able to look through all posted events and see the most popular. Can save events or mark if going and access them easily on their profile. </li>
+			  		</ul>
+		  		</div>
 		  	</div>
 		  </div>
 		  <div class="tab-pane fade" id="content-contact" role="tabpanel" aria-labelledby="content-contact-tab">
-		  	<h2> Salt Lake City, Utah </h2>
-				<h2> (214) 620-3938 </h2>
-				<h2> rbsouth@gmail.com </h2>
-				<%= form_with model: %>
+		  	<div class="row content-row">
+		  		<div class="col-lg-6 col-12">
+		  			<div class="contact-title"> Info </div>
+		  			<div class="contact-info">
+		  				<h2> Salt Lake City, Utah </h2>
+							<h2> (214) 620-3938 </h2>
+							<h2> rbsouth@gmail.com </h2>
+		  			</div>
+		  		</div>
+		  		<div class="col-lg-6 col-12">
+		  			<div class="contact-title"> Send me an Email </div>
+		  			<%= form_with url: send_email_path, class: 'contact-form', local: true do |f| %>
+							<div class="form-group">
+								<%= f.text_field :from, placeholder: 'Your Email Address', class: 'form-control' %>
+							</div>
+							<div class="form-group">
+								<%= f.text_field :subject, placeholder: 'Subject', class: 'form-control' %>
+							</div>
+							<div class="form-group">
+								<%= f.text_area :body, placeholder: 'Body', class: 'form-control' %>
+							</div>
+							<%= f.submit 'Send', class: "btn btn-primary" %>
+		  			<% end %>
+		  		</div>
+		  	</div>
 		  </div>
 		</div>
 	</div>
