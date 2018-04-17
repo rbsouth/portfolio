@@ -11,7 +11,11 @@
   </head>
 
   <body>
-    <div class="social-links"></div>
+    <div class="social-links">
+      <%= link_to (image_tag (asset_path 'linkedin-icon.svg'), class: 'social-link'), @myLinkedin, :target => "_blank" %>
+      <%= link_to (image_tag (asset_path 'github-icon.svg'), class: 'social-link'), @myGithub, :target => "_blank" %>
+      <%= link_to (image_tag (asset_path 'twitter-icon.svg'), class: 'social-link'), @myTwitter, :target => "_blank" %>
+    </div>
     <%= yield %>
   </body>
 </html>
