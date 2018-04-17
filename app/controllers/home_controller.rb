@@ -15,7 +15,21 @@ class HomeController < ApplicationController
   end
 
   def email
-  	Pony.mail(:to => 'rbsouth@gmail.com', :from => params[:from], :subject => params[:subject], :body => params[:body])
+  	Pony.mail :to => ENV['TO_EMAIL'], 
+              :from => params[:from], 
+              :subject =>  params[:subject], 
+              :body => params[:body],
+              :via => :smtp, 
+              :smtp => { 
+                  :address              => 'smtp.gmail.com', 
+                  :port                 => '587', 
+                  :user_name                 => ENV['GMAIL_USER'], 
+                  :password             => ENV['GMAIL_PASSWORD'], 
+                  :authentication       => :plain, 
+# :plain, :login, :cram_md5, no auth by default 
+                  :domain               => "reidsouth.com" # the HELO 
+# domain provided by the client to the server 
+                } 
 
   	render :new
   end
